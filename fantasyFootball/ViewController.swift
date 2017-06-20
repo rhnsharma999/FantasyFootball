@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.lightGray.cgColor
+        view.autocorrectionType = UITextAutocorrectionType.no
+        view.autocapitalizationType = .none
         view.placeholder = "Enter email"
         return view
     }()
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
         view.placeholder = "Enter Password"
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.lightGray.cgColor
+        view.autocorrectionType = UITextAutocorrectionType.no
+        view.autocapitalizationType = .none
         return view
     }()
     
@@ -62,7 +66,10 @@ extension ViewController{
         if let email = emailField.text, let password = passField.text{
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error != nil{
-                    print(error?.localizedDescription)
+                    //print(error?.localizedDescription)
+                    if let msg = error?.localizedDescription{
+                        self.showError(msg: msg)
+                    }
                 }
                 else{
                     let vc = UINavigationController(rootViewController: MainViewController())
@@ -103,6 +110,12 @@ extension ViewController {
         SignInButton.topAnchor.constraint(equalTo: passField.bottomAnchor,constant:30).isActive = true
         
         SignInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
+    }
+    
+    func showError(msg:String){
+        let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
 
