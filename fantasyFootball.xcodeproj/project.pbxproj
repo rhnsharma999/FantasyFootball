@@ -13,6 +13,7 @@
 		DE4D1FB51EF97C1300649989 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */; };
 		DE4D1FB71EF97EEE00649989 /* createPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D1FB61EF97EEE00649989 /* createPlayerViewController.swift */; };
 		DE4D1FB91EF9849500649989 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D1FB81EF9849500649989 /* Models.swift */; };
+		DE7DB0C21EF98A2E00EF9D62 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */; };
 		DEC025BF1EF9606000D25146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC025BE1EF9606000D25146 /* AppDelegate.swift */; };
 		DEC025C11EF9606000D25146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC025C01EF9606000D25146 /* ViewController.swift */; };
 		DEC025C41EF9606000D25146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC025C21EF9606000D25146 /* Main.storyboard */; };
@@ -52,16 +53,17 @@
 		85BC0322F70EAF5EF3DE03DB /* Pods-fantasyFootball.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fantasyFootball.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fantasyFootball/Pods-fantasyFootball.debug.xcconfig"; sourceTree = "<group>"; };
 		B2C145E890E18ACD790B4A5B /* Pods-fantasyFootballUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fantasyFootballUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fantasyFootballUITests/Pods-fantasyFootballUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6BF90E3F23B9E007BC173B6 /* Pods-fantasyFootballTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fantasyFootballTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fantasyFootballTests/Pods-fantasyFootballTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "fantasyFootball/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE4D1FB61EF97EEE00649989 /* createPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createPlayerViewController.swift; sourceTree = "<group>"; };
 		DE4D1FB81EF9849500649989 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		DEC025BB1EF9606000D25146 /* fantasyFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fantasyFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC025BE1EF9606000D25146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC025C01EF9606000D25146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DEC025C31EF9606000D25146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DEC025C51EF9606000D25146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEC025C51EF9606000D25146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fantasyFootball/Assets.xcassets; sourceTree = "<group>"; };
 		DEC025C81EF9606000D25146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DEC025CA1EF9606000D25146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEC025CA1EF9606000D25146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = fantasyFootball/Info.plist; sourceTree = "<group>"; };
 		DEC025CF1EF9606100D25146 /* fantasyFootballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fantasyFootballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC025D31EF9606100D25146 /* fantasyFootballTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantasyFootballTests.swift; sourceTree = "<group>"; };
 		DEC025D51EF9606100D25146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +71,7 @@
 		DEC025DE1EF9606100D25146 /* fantasyFootballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fantasyFootballUITests.swift; sourceTree = "<group>"; };
 		DEC025E01EF9606100D25146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC025EC1EF9636400D25146 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		DEC025EE1EF964EE00D25146 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		DEC025EE1EF964EE00D25146 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = fantasyFootball/Reusable.swift; sourceTree = "<group>"; };
 		DEC025F01EF965DF00D25146 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,9 +126,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DE7DB0C01EF98A0400EF9D62 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+				DEC025C21EF9606000D25146 /* Main.storyboard */,
+				DEC025EE1EF964EE00D25146 /* Reusable.swift */,
+				DEC025C51EF9606000D25146 /* Assets.xcassets */,
+				DEC025C71EF9606000D25146 /* LaunchScreen.storyboard */,
+				DEC025CA1EF9606000D25146 /* Info.plist */,
+				DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */,
+			);
+			name = tools;
+			sourceTree = "<group>";
+		};
 		DEC025B21EF9606000D25146 = {
 			isa = PBXGroup;
 			children = (
+				DE7DB0C01EF98A0400EF9D62 /* tools */,
 				DEC025BD1EF9606000D25146 /* fantasyFootball */,
 				DEC025D21EF9606100D25146 /* fantasyFootballTests */,
 				DEC025DD1EF9606100D25146 /* fantasyFootballUITests */,
@@ -149,18 +165,13 @@
 		DEC025BD1EF9606000D25146 /* fantasyFootball */ = {
 			isa = PBXGroup;
 			children = (
+				DE4D1FB81EF9849500649989 /* Models.swift */,
 				DEC025BE1EF9606000D25146 /* AppDelegate.swift */,
 				DEC025C01EF9606000D25146 /* ViewController.swift */,
 				DEC025EC1EF9636400D25146 /* MainViewController.swift */,
 				DEC025F01EF965DF00D25146 /* CustomCell.swift */,
-				DEC025C21EF9606000D25146 /* Main.storyboard */,
-				DEC025EE1EF964EE00D25146 /* Reusable.swift */,
-				DEC025C51EF9606000D25146 /* Assets.xcassets */,
-				DEC025C71EF9606000D25146 /* LaunchScreen.storyboard */,
-				DEC025CA1EF9606000D25146 /* Info.plist */,
-				DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */,
 				DE4D1FB61EF97EEE00649989 /* createPlayerViewController.swift */,
-				DE4D1FB81EF9849500649989 /* Models.swift */,
+				DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */,
 			);
 			path = fantasyFootball;
 			sourceTree = "<group>";
@@ -473,6 +484,7 @@
 				DEC025F11EF965DF00D25146 /* CustomCell.swift in Sources */,
 				DEC025C11EF9606000D25146 /* ViewController.swift in Sources */,
 				DE4D1FB71EF97EEE00649989 /* createPlayerViewController.swift in Sources */,
+				DE7DB0C21EF98A2E00EF9D62 /* AddPlayerViewController.swift in Sources */,
 				DEC025BF1EF9606000D25146 /* AppDelegate.swift in Sources */,
 				DE4D1FB91EF9849500649989 /* Models.swift in Sources */,
 			);
@@ -516,6 +528,7 @@
 				DEC025C31EF9606000D25146 /* Base */,
 			);
 			name = Main.storyboard;
+			path = fantasyFootball;
 			sourceTree = "<group>";
 		};
 		DEC025C71EF9606000D25146 /* LaunchScreen.storyboard */ = {
@@ -524,6 +537,7 @@
 				DEC025C81EF9606000D25146 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = fantasyFootball;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

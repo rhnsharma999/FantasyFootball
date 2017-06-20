@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         view.autocorrectionType = UITextAutocorrectionType.no
         view.autocapitalizationType = .none
         view.placeholder = "Enter email"
+        view.text = "1@1.com"
         return view
     }()
     
@@ -30,6 +31,7 @@ class ViewController: UIViewController {
         view.layer.borderColor = UIColor.lightGray.cgColor
         view.autocorrectionType = UITextAutocorrectionType.no
         view.autocapitalizationType = .none
+        view.text = "password"
         return view
     }()
     

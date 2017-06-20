@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import ImageLoader
+import FirebaseAuth
 class MainViewController: UIViewController {
     
     var players = [Players]()
@@ -50,6 +52,13 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: Reusable.reuseIdForMain) as! CustomCell
         cell.nameLabel.text = players[indexPath.row].name
         cell.otherInfo.text = players[indexPath.row].otherInfo
+        if let url = players[indexPath.row].imageUrl{
+            if let url1 = URL(string: url){
+                    cell.profileImage.load.request(with:url1)
+            }
+            
+        }
+        
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -60,9 +69,13 @@ extension MainViewController:UITableViewDataSource,UITableViewDelegate {
 
 extension MainViewController{
     
+    
     func setupFIrebase(){
+        
+        guard let user = FIRAuth.auth()?.currentUser else {return }
+        
         let ref:FIRDatabaseReference = FIRDatabase.database().reference()
-        ref.child("players").observe(.childAdded, with: { (snapshot) in
+        ref.child("users").child(user.uid).observe(.childAdded, with: { (snapshot) in
         
         let data = snapshot.value as? Dictionary<String,String>
         let newPlayer = Players(name: data?["name"], imageUrl: data?["imageURL"], otherInfo: data?["otherInfo"], key: snapshot.key)
@@ -94,6 +107,8 @@ extension MainViewController{
         present(UINavigationController(rootViewController:createPlayerViewController()), animated: true, completion: nil)
     }
     func addPlayer(){
+        
+        navigationController?.pushViewController(AddPlayerViewController(), animated: true)
         print("this will move to a new vc to add a new player")
     }
     
