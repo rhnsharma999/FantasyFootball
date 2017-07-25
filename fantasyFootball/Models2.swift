@@ -7,3 +7,10 @@
 //
 
 import Foundation
+struct Info{
+    
+    var DOB:String?
+    var gender:String?
+    var name:String?
+   
+}

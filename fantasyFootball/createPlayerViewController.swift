@@ -36,7 +36,7 @@ class createPlayerViewController: UIViewController {
     var sendButton:UIButton = {
         let view = UIButton(type: .system)
         view.translatesAutoresizingMaskIntoConstraints = false;
-        view.setTitle("Send to database", for: .normal)
+        view.setTitle("Upload", for: .normal)
         view.layer.borderWidth = 0.5
         view.layer.borderColor = UIColor.lightGray.cgColor
         return view;

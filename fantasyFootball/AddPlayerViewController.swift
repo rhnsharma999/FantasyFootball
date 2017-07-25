@@ -60,20 +60,13 @@ extension AddPlayerViewController{
         guard let user = FIRAuth.auth()?.currentUser else { return }
         
         let ref = FIRDatabase.database().reference()
-        var key = "",name = "", url = "", info = "";
         
-        if let def = player.key{
-            key = def;
-        }
-        if let def = player.name{
-            name = def
-        }
-        if let def = player.imageUrl {
-            url = def;
-        }
-        if let def = player.otherInfo {
-            info = def
-        }
+        let key = player.key ?? ""
+        let name = player.name ?? ""
+        let url = player.imageUrl ?? ""
+        let info = player.otherInfo ?? ""
+        
+        
         let data = ["name":name,"otherInfo":info,"imageURL":url]
         ref.child("users").child(user.uid).childByAutoId().setValue(data)
         self.navigationController?.popViewController(animated: true)
@@ -102,9 +95,15 @@ extension AddPlayerViewController:UITableViewDataSource,UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: Reusable.reuseIdForMain) as! CustomCell
         cell.nameLabel.text = players[indexPath.row].name
         cell.otherInfo.text = players[indexPath.row].otherInfo
-        if let url = players[indexPath.row].imageUrl{
-            cell.profileImage.load.request(with: URL(string:url)!)
+        if let urlString = players[indexPath.row].imageUrl,
+            let url = URL(string: urlString) {
+            cell.profileImage.load.request(with: url)
         }
+
+        //if let url = players[indexPath.row].imageUrl{
+          //  cell.profileImage.load.request(with: URL(string:url)!)
+        
+        
         
         return cell
     }

@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     
     var players = [Players]()
     
-    lazy var myTableView:UITableView = {
+    lazy var myTableView:(UITableView) = {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false;
         view.delegate = self;

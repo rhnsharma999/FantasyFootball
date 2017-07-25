@@ -14,41 +14,59 @@ class ViewController: UIViewController {
     var emailField:UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.borderWidth = 2
+        view.keyboardType = UIKeyboardType.emailAddress
+        view.layer.cornerRadius = 10
+        view.backgroundColor = .white
+        view.layer.borderColor = UIColor(red: 123/255, green: 213/255, blue: 250/255, alpha: 1.0).cgColor
         view.autocorrectionType = UITextAutocorrectionType.no
         view.autocapitalizationType = .none
         view.placeholder = "Enter email"
-        view.text = "1@1.com"
         return view
     }()
     
     var passField:UITextField = {
         let view = UITextField()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 10
+        view.backgroundColor = .white
+        view.isSecureTextEntry = true
         view.placeholder = "Enter Password"
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor(red: 123/255, green: 213/255, blue: 250/255, alpha: 1.0).cgColor
         view.autocorrectionType = UITextAutocorrectionType.no
         view.autocapitalizationType = .none
-        view.text = "password"
         return view
     }()
     
     var SignInButton:UIButton = {
         let view = UIButton(type: .system)
         view.translatesAutoresizingMaskIntoConstraints = false;
+        view.layer.cornerRadius = 50
+        view.backgroundColor = .white
         view.setTitle("Sign In", for: .normal)
-        view.layer.borderWidth = 0.5
-        view.layer.borderColor = UIColor.lightGray.cgColor
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor(red: 123/255, green: 213/255, blue: 250/255, alpha: 1.0).cgColor
         return view;
+    }()
+    
+    var CreateAcc:UIButton = {
+        let view = UIButton(type: .system)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 50
+        view.backgroundColor = .white
+        view.setTitle("Sign Up", for: .normal)
+        view.layer.borderWidth = 2
+        view.layer.borderColor = UIColor(red: 123/255, green: 213/255, blue: 250/255, alpha: 1.0).cgColor
+        return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupFields()
         setupButtons()
-        view.backgroundColor = .white;
+        view.backgroundColor = UIColor(red: 115/255, green: 150/255, blue: 211/255, alpha: 1.0)
+;
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,6 +100,13 @@ extension ViewController{
         
         
     }
+    
+ 
+    func createacc(){
+        present(UINavigationController(rootViewController:CreateAccount()), animated: true, completion: nil)
+
+    }
+    
 }
 
 extension ViewController {
@@ -106,11 +131,18 @@ extension ViewController {
     
     func setupButtons(){
         view.addSubview(SignInButton)
+        view.addSubview(CreateAcc)
         SignInButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         SignInButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        SignInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        SignInButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 75).isActive = true
         SignInButton.topAnchor.constraint(equalTo: passField.bottomAnchor,constant:30).isActive = true
         
+        CreateAcc.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        CreateAcc.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        CreateAcc.leftAnchor.constraint(equalTo: SignInButton.rightAnchor, constant: 20).isActive = true
+        CreateAcc.topAnchor.constraint(equalTo: passField.bottomAnchor, constant: 30).isActive = true
+        CreateAcc.addTarget(self, action: #selector(createacc), for: .touchUpInside)
+
         SignInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
     }
     

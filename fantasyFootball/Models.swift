@@ -13,5 +13,4 @@ struct Players{
     var imageUrl:String?
     var otherInfo:String?
     var key:String?
-    
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0169102F43CFD945ED5383E4 /* Pods_fantasyFootballTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08AB9F3E14712C31A6194009 /* Pods_fantasyFootballTests.framework */; };
+		3727DFAD1F1630D90057C5FE /* Models2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3727DFAC1F1630D90057C5FE /* Models2.swift */; };
+		37CA001C1F0D59E6008F75C1 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA001B1F0D59E6008F75C1 /* CreateAccount.swift */; };
 		B88FF09548F8F97A45A5C935 /* Pods_fantasyFootballUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A7BA76F97235B833AD1AC7 /* Pods_fantasyFootballUITests.framework */; };
 		C79DA56B2D9482E67448EE07 /* Pods_fantasyFootball.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47EAE98B091C1954289625BE /* Pods_fantasyFootball.framework */; };
 		DE4D1FB51EF97C1300649989 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE4D1FB41EF97C1300649989 /* GoogleService-Info.plist */; };
@@ -15,7 +17,7 @@
 		DE4D1FB91EF9849500649989 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4D1FB81EF9849500649989 /* Models.swift */; };
 		DE7DB0C21EF98A2E00EF9D62 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */; };
 		DEC025BF1EF9606000D25146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC025BE1EF9606000D25146 /* AppDelegate.swift */; };
-		DEC025C11EF9606000D25146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC025C01EF9606000D25146 /* ViewController.swift */; };
+		DEC025C11EF9606000D25146 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC025C01EF9606000D25146 /* SignIn.swift */; };
 		DEC025C41EF9606000D25146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC025C21EF9606000D25146 /* Main.storyboard */; };
 		DEC025C61EF9606000D25146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC025C51EF9606000D25146 /* Assets.xcassets */; };
 		DEC025C91EF9606000D25146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC025C71EF9606000D25146 /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		08AB9F3E14712C31A6194009 /* Pods_fantasyFootballTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fantasyFootballTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3727DFAC1F1630D90057C5FE /* Models2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models2.swift; sourceTree = "<group>"; };
+		37CA001B1F0D59E6008F75C1 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		39C159250110E7573AF316D0 /* Pods-fantasyFootball.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fantasyFootball.release.xcconfig"; path = "Pods/Target Support Files/Pods-fantasyFootball/Pods-fantasyFootball.release.xcconfig"; sourceTree = "<group>"; };
 		47EAE98B091C1954289625BE /* Pods_fantasyFootball.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fantasyFootball.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EBB51DA56964659069BD32 /* Pods-fantasyFootballTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fantasyFootballTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-fantasyFootballTests/Pods-fantasyFootballTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +63,7 @@
 		DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		DEC025BB1EF9606000D25146 /* fantasyFootball.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fantasyFootball.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC025BE1EF9606000D25146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEC025C01EF9606000D25146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEC025C01EF9606000D25146 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		DEC025C31EF9606000D25146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEC025C51EF9606000D25146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = fantasyFootball/Assets.xcassets; sourceTree = "<group>"; };
 		DEC025C81EF9606000D25146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,9 +170,11 @@
 			isa = PBXGroup;
 			children = (
 				DE4D1FB81EF9849500649989 /* Models.swift */,
+				3727DFAC1F1630D90057C5FE /* Models2.swift */,
 				DEC025BE1EF9606000D25146 /* AppDelegate.swift */,
-				DEC025C01EF9606000D25146 /* ViewController.swift */,
+				DEC025C01EF9606000D25146 /* SignIn.swift */,
 				DEC025EC1EF9636400D25146 /* MainViewController.swift */,
+				37CA001B1F0D59E6008F75C1 /* CreateAccount.swift */,
 				DEC025F01EF965DF00D25146 /* CustomCell.swift */,
 				DE4D1FB61EF97EEE00649989 /* createPlayerViewController.swift */,
 				DE7DB0C11EF98A2E00EF9D62 /* AddPlayerViewController.swift */,
@@ -271,7 +277,7 @@
 				TargetAttributes = {
 					DEC025BA1EF9606000D25146 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = QH78WYZE35;
+						DevelopmentTeam = QAW364JJ2J;
 						ProvisioningStyle = Automatic;
 					};
 					DEC025CE1EF9606100D25146 = {
@@ -482,10 +488,12 @@
 				DEC025EF1EF964EE00D25146 /* Reusable.swift in Sources */,
 				DEC025ED1EF9636400D25146 /* MainViewController.swift in Sources */,
 				DEC025F11EF965DF00D25146 /* CustomCell.swift in Sources */,
-				DEC025C11EF9606000D25146 /* ViewController.swift in Sources */,
+				DEC025C11EF9606000D25146 /* SignIn.swift in Sources */,
 				DE4D1FB71EF97EEE00649989 /* createPlayerViewController.swift in Sources */,
 				DE7DB0C21EF98A2E00EF9D62 /* AddPlayerViewController.swift in Sources */,
+				3727DFAD1F1630D90057C5FE /* Models2.swift in Sources */,
 				DEC025BF1EF9606000D25146 /* AppDelegate.swift in Sources */,
+				37CA001C1F0D59E6008F75C1 /* CreateAccount.swift in Sources */,
 				DE4D1FB91EF9849500649989 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,7 +647,7 @@
 			baseConfigurationReference = 85BC0322F70EAF5EF3DE03DB /* Pods-fantasyFootball.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QH78WYZE35;
+				DEVELOPMENT_TEAM = QAW364JJ2J;
 				INFOPLIST_FILE = fantasyFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = webarch.fantasyFootball;
@@ -653,7 +661,7 @@
 			baseConfigurationReference = 39C159250110E7573AF316D0 /* Pods-fantasyFootball.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QH78WYZE35;
+				DEVELOPMENT_TEAM = QAW364JJ2J;
 				INFOPLIST_FILE = fantasyFootball/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = webarch.fantasyFootball;
