@@ -9,6 +9,23 @@
 import UIKit
 import Firebase
 
+//class CustomField:UITextField{
+//
+//    override init(frame:CGRect){
+//        super.init(frame: frame)
+//    }
+//
+////    override func textRect(forBounds bounds: CGRect) -> CGRect {
+////        <#code#>
+////    }
+//    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+//        return bounds.offsetBy(dx: 10, dy: 0);
+//    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//}
+
 class ViewController: UIViewController {
 
     var emailField:UITextField = {
@@ -22,7 +39,15 @@ class ViewController: UIViewController {
         view.autocorrectionType = UITextAutocorrectionType.no
         view.autocapitalizationType = .none
         view.placeholder = "Enter email"
+      
         return view
+    }()
+    var activity:UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.translatesAutoresizingMaskIntoConstraints = false;
+        view.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        view.hidesWhenStopped = true;
+        return view;
     }()
     
     var passField:UITextField = {
@@ -42,7 +67,7 @@ class ViewController: UIViewController {
     var SignInButton:UIButton = {
         let view = UIButton(type: .system)
         view.translatesAutoresizingMaskIntoConstraints = false;
-        view.layer.cornerRadius = 50
+        view.layer.cornerRadius = 10
         view.backgroundColor = .white
         view.setTitle("Sign In", for: .normal)
         view.layer.borderWidth = 2
@@ -65,6 +90,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupFields()
         setupButtons()
+        setupActivity()
         view.backgroundColor = UIColor(red: 115/255, green: 150/255, blue: 211/255, alpha: 1.0)
 ;
     }
@@ -83,17 +109,22 @@ extension ViewController{
     
     func signIn(){
         
+        activity.startAnimating()
         if let email = emailField.text, let password = passField.text{
             FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error != nil{
                     //print(error?.localizedDescription)
+                    self.activity.stopAnimating()
                     if let msg = error?.localizedDescription{
                         self.showError(msg: msg)
                     }
                 }
                 else{
+                    
                     let vc = UINavigationController(rootViewController: MainViewController())
+                    self.activity.stopAnimating()
                     self.present(vc, animated: true, completion: nil)
+                    
                 }
             })
         }
@@ -146,6 +177,13 @@ extension ViewController {
         SignInButton.addTarget(self, action: #selector(signIn), for: .touchUpInside)
     }
     
+    func setupActivity(){
+        view.addSubview(activity)
+        activity.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        activity.topAnchor.constraint(equalTo: SignInButton.bottomAnchor,constant:30).isActive = true
+        activity.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        activity.widthAnchor.constraint(equalToConstant: 50).isActive = true
+    }
     func showError(msg:String){
         let alert = UIAlertController(title: "Error", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
